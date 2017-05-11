@@ -11,8 +11,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import me.chon.util.ViewInjectUtils;
 import me.nohc.Bind;
-import me.nohc.ViewInjector;
 
 
 /**
@@ -29,7 +29,8 @@ public class CategoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
-        ViewInjector.injectView(this);
+//        ViewInjector.injectView(this);
+        ViewInjectUtils.inject(this);
 
         mCategoryLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
